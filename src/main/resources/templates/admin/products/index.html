@@ -34,8 +34,8 @@
                     </td>
                     <td th:text="${cats[__${product.categoryId}__]}"></td>
                     <td>asd</td>
-                    <td><img class="image" th:src="@{'media/'+${theUser.avatar}}" alt="Avatar"></td>
-                    <td><img class="image" th:src="@{'/media/'+${theUser.avatar}}" alt="Avatar"></td>
+                    <td><img class="image" th:src="@{'media/'+${product.image}}" alt="Avatar"></td>
+                    <td><img class="image" th:src="@{'/media/'+${product.image}}" alt="Avatar"></td>
                      <td>
                         <img style="width: 100px;" th:src="${product.image}">
                     </td>
@@ -43,7 +43,7 @@
                      <td  th:src="media/@{${product.image}}"></td>
                      <td  th:src="/media/@{${product.image}}"></td>
                       <td  th:src="@{'media/' + ${product.image}}"></td>
-                      <td><img class="image" th:src="@{'/resources/media/'+${theUser.avatar}}" alt="Avatar">
+                      <td><img class="image" th:src="@{'/resources/media/'+${product.image}}" alt="Avatar">
                       </td>
                 </tr>
             </table>
