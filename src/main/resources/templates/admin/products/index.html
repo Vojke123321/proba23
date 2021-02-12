@@ -20,10 +20,11 @@
                     <th>Name</th>
                     <th>Image</th>
                     <th>Category</th>
-                    <th>Price</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
                     <th>proba</th>
+                     <th>proba</th>
+                     <th>proba</th>
+                      <th>proba</th>
+                     <th>proba</th>
                      <th>proba</th>
                 </tr>
                 <tr th:each="product: ${products}">
@@ -32,13 +33,18 @@
                         <img style="width: 100px;" th:src="@{media/ + ${product.image}}">
                     </td>
                     <td th:text="${cats[__${product.categoryId}__]}"></td>
-                    <td th:text="'$ ' + ${product.price}"></td>
-                    <td><a th:href="@{'/admin/products/edit/' + ${product.id}}">Edit</a></td>
-                    <td><a th:href="@{'/admin/products/delete/' + ${product.id}}" class="confirmDeletion">Delete</a></td>
+                    <td>asd</td>
+                    <td><img class="image" th:src="@{'media/'+${theUser.avatar}}" alt="Avatar"></td>
+                    <td><img class="image" th:src="@{'/media/'+${theUser.avatar}}" alt="Avatar"></td>
                      <td>
                         <img style="width: 100px;" th:src="${product.image}">
                     </td>
                     <td  th:src="@{${product.image}}"></td>
+                     <td  th:src="media/@{${product.image}}"></td>
+                     <td  th:src="/media/@{${product.image}}"></td>
+                      <td  th:src="@{'media/' + ${product.image}}"></td>
+                      <td><img class="image" th:src="@{'/resources/media/'+${theUser.avatar}}" alt="Avatar">
+                      </td>
                 </tr>
             </table>
         </div>
