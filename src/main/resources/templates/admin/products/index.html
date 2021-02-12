@@ -40,8 +40,8 @@
                         <img style="width: 100px;" th:src="${product.image}">
                     </td>
                     <td  th:src="@{${product.image}}"></td>
-                     <td  th:src="media/@{${product.image}}"></td>
-                     <td  th:src="/media/@{${product.image}}"></td>
+                     <td  th:src="@{${product.image}}"></td>
+                     <td  th:src="@{${product.image}}"></td>
                       <td  th:src="@{'media/' + ${product.image}}"></td>
                       <td><img class="image" th:src="@{'/resources/media/'+${product.image}}" alt="Avatar">
                       </td>
