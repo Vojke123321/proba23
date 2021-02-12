@@ -24,6 +24,7 @@
                     <th>Edit</th>
                     <th>Delete</th>
                     <th>proba</th>
+                     <th>proba</th>
                 </tr>
                 <tr th:each="product: ${products}">
                     <td th:text="${product.name}"></td>
@@ -35,8 +36,9 @@
                     <td><a th:href="@{'/admin/products/edit/' + ${product.id}}">Edit</a></td>
                     <td><a th:href="@{'/admin/products/delete/' + ${product.id}}" class="confirmDeletion">Delete</a></td>
                      <td>
-                        <img style="width: 100px;" th:src="@{/media/ + ${product.image}}">
+                        <img style="width: 100px;" th:src="${product.image}">
                     </td>
+                    <td th:text="${product.image}"></td>
                 </tr>
             </table>
         </div>
